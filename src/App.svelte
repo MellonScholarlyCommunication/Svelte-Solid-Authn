@@ -1,13 +1,18 @@
 <script>
-import SolidLogin from "./SolidLogin.svelte";
+	import SolidLogin from "./SolidLogin.svelte";
+	import SolidDemo from "./SolidDemo.svelte";
 
-	export let name;
+	let webId;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
+	<h1>Hello</h1>
+	{#if webId}
+	<p>Logged in as {webId}</p>
+	{/if}
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<SolidLogin/>
+	<SolidLogin bind:webId={webId}/>
+	<SolidDemo/>
 </main>
 
 <style>

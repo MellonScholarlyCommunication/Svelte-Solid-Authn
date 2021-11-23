@@ -1,10 +1,9 @@
 <script>
-    import { handleIncomingRedirect, login, logout, fetch, getDefaultSession } from '@inrupt/solid-client-authn-browser'
+    import { handleIncomingRedirect, login, logout, fetch, getDefaultSession } from '@inrupt/solid-client-authn-browser';
 
-    let webId    = getDefaultSession().info.webId;
+    export let webId = '';
+
     let issuer   = "https://hochstenbach.inrupt.net";
-    let resource = "https://hochstenbach.inrupt.net/private/";
-    let data     = "";
 
     handleIncomingRedirect({
         restorePreviousSession: true,
@@ -37,11 +36,11 @@
     }
 </script>
 
-<p>{webId ? `Logged in as ${webId}` : "Not logged in yet"}</p>
-
 <div>
     <form>
+      IDP:
       <input
+        size="40"
         type="text"
         bind:value={issuer}
       />
@@ -49,14 +48,3 @@
       <button on:click|preventDefault={handleLogout}>Log Out</button>
     </form>
 </div>
-
-<hr />
-<div>
-  <input
-    size="80"
-    type="text"
-    bind:value={resource}
-  />
-  <button on:click={handleFetch}>Fetch</button>
-</div>
-<textarea cols=86 rows=20>{data}</textarea>
