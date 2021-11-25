@@ -12,6 +12,7 @@
 	<p>Logged in as {webId}</p>
 	{/if}
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<p>Source Code : https://github.com/MellonScholarlyCommunication/Svelte-Solid-Authn</p>
 	<SolidLogin bind:webId={webId} issuer="https://hochstenbach.inrupt.net"/>
 	<SolidReadDemo resource="https://hochstenbach.inrupt.net/private/"/>
 	<SolidWriteDemo resource="https://hochstenbach.inrupt.net/private/demo.ttl"/>

@@ -2,6 +2,35 @@
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template-webpack.
 
+## Quick install
+
+Need:
+
+- Node : https://nodejs.org/en/
+  
+Clone this code from github:
+
+```
+git clone https://github.com/MellonScholarlyCommunication/Svelte-Solid-Authn
+```
+
+Install the dependencies:
+
+```
+cd Svelte-Solid-Authn
+npm install
+```
+
+Run the development server:
+
+```
+npm run dev
+```
+
+Navigate to [localhost:8080](http://localhost:8080).
+
+## Start from scratch
+
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
@@ -11,7 +40,7 @@ cd svelte-app
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
-## Get started
+## Install dependencies
 
 Install the dependencies...
 
