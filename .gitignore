@@ -1,5 +1,3 @@
 .DS_Store
 node_modules
-public/build/bundle.*
 package-lock.json
-dist
