@@ -11,7 +11,7 @@
 	<p>Logged in as {webId}</p>
 	{/if}
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<SolidLogin bind:webId={webId}/>
+	<SolidLogin bind:webId={webId} issuer="https://hochstenbach.inrupt.net"/>
 	<SolidDemo/>
 </main>
 

@@ -1,9 +1,8 @@
 <script>
     import { handleIncomingRedirect, login, logout, fetch, getDefaultSession } from '@inrupt/solid-client-authn-browser';
 
-    export let webId = '';
-
-    let issuer   = "https://hochstenbach.inrupt.net";
+    export let webId;
+    export let issuer;
 
     handleIncomingRedirect({
         restorePreviousSession: true,
@@ -24,6 +23,7 @@
     }
 
     function handleLogout() {
+        console.debug(`Logout from : ${issuer}`);
         logout();
         webId = undefined;
     }
