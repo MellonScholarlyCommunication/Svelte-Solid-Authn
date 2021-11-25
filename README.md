@@ -2,6 +2,10 @@
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template-webpack.
 
+## Try it live
+
+https://mellonscholarlycommunication.github.io/Svelte-Solid-Authn/public/
+
 ## Quick install
 
 Need:
