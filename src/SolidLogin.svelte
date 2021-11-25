@@ -1,5 +1,6 @@
 <script>
-    import { handleIncomingRedirect, login, logout, fetch, getDefaultSession } from '@inrupt/solid-client-authn-browser';
+    import { handleIncomingRedirect, login, logout, getDefaultSession } from '@inrupt/solid-client-authn-browser';
+    import { session } from './session';
 
     export let webId;
     export let issuer;
@@ -11,6 +12,7 @@
         }
     }).then((info) => {
         webId = info.webId;
+        session.set( getDefaultSession() );
     });
    
     function handleLogin() {
@@ -26,13 +28,7 @@
         console.debug(`Logout from : ${issuer}`);
         logout();
         webId = undefined;
-    }
-
-    async function handleFetch() {
-        const response = await fetch(resource, { 
-                          headers: new Headers({ Accept: "text/turtle" }) 
-                        });
-        data = await response.text();
+        session.set(undefined);
     }
 </script>
 

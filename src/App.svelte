@@ -1,6 +1,7 @@
 <script>
 	import SolidLogin from "./SolidLogin.svelte";
-	import SolidDemo from "./SolidDemo.svelte";
+	import SolidReadDemo from "./SolidReadDemo.svelte";
+	import SolidWriteDemo from "./SolidWriteDemo.svelte";
 
 	let webId;
 </script>
@@ -12,7 +13,8 @@
 	{/if}
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 	<SolidLogin bind:webId={webId} issuer="https://hochstenbach.inrupt.net"/>
-	<SolidDemo/>
+	<SolidReadDemo resource="https://hochstenbach.inrupt.net/private/"/>
+	<SolidWriteDemo resource="https://hochstenbach.inrupt.net/private/demo.ttl"/>
 </main>
 
 <style>
